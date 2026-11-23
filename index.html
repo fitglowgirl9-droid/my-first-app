@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>मेरा पहला वेब ऐप</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #dbeafe, #ede9fe);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .app {
+      background: white;
+      width: 100%;
+      max-width: 420px;
+      padding: 30px 20px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 8px 30px #00000018;
+    }
+
+    h1 {
+      color: #4338ca;
+      font-size: 27px;
+    }
+
+    p {
+      color: #555;
+      font-size: 16px;
+    }
+
+    #count {
+      font-size: 65px;
+      font-weight: bold;
+      color: #2563eb;
+      margin: 25px 0;
+    }
+
+    button {
+      border: none;
+      padding: 14px 22px;
+      margin: 7px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      color: white;
+      background: #2563eb;
+    }
+
+    button.reset {
+      background: #dc2626;
+    }
+
+    #message {
+      margin-top: 20px;
+      color: #15803d;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="app">
+    <h1>मेरा पहला वेब ऐप</h1>
+
+    <p>GitHub और Chrome परीक्षण</p>
+
+    <div id="count">0</div>
+
+    <button onclick="increaseCount()">
+      संख्या बढ़ाएँ +
+    </button>
+
+    <button class="reset" onclick="resetCount()">
+      रीसेट करें
+    </button>
+
+    <div id="message">
+      आपका ऐप सफलतापूर्वक तैयार है!
+    </div>
+  </div>
+
+  <script>
+    let count = 0;
+
+    function increaseCount() {
+      count++;
+      document.getElementById("count").innerText = count;
+      document.getElementById("message").innerText =
+        "बटन सफलतापूर्वक काम कर रहा है!";
+    }
+
+    function resetCount() {
+      count = 0;
+      document.getElementById("count").innerText = count;
+      document.getElementById("message").innerText =
+        "संख्या दोबारा शून्य हो गई!";
+    }
+  </script>
+
+</body>
+</html>
